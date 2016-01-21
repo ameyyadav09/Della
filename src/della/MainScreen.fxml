@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane fx:id="Splitpane" dividerPositions="0.17587939698492464" orientation="VERTICAL" prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="della.MainScreenController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="598.0">
+         <children>
+            <Button fx:id="consoleScreen" layoutX="7.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleConsoleButton" prefHeight="25.0" prefWidth="10.0" text="Console" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="481.0" AnchorPane.topAnchor="21.0" />
+            <Button fx:id="actionItemsScreen" layoutX="127.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleActionItemsButton" prefHeight="25.0" prefWidth="110.0" text="Action Items" />
+            <Button fx:id="memberScreen" layoutX="244.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleMemberScreenButton" prefHeight="25.0" prefWidth="110.0" text="Members Screen" />
+            <Button fx:id="teamScreen" layoutX="362.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleTeamScreenButton" prefHeight="25.0" prefWidth="110.0" text="Teams Screen" />
+            <Button fx:id="quit" layoutX="481.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleQuitButton" prefHeight="25.0" prefWidth="110.0" text="Quit" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+    </AnchorPane>
+    <AnchorPane fx:id="anchCmdController" minHeight="0.0" minWidth="0.0" prefHeight="40.0" prefWidth="600.0">
+       <children>
+       <Label layoutX="482.0" layoutY="427.0" text="Intenet:">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Label>
+         <Label fx:id="DisplayInternetConnection" layoutX="536.0" layoutY="431.0" textFill="RED" />
+         <Label fx:id="DisplayInternetConnection1" layoutX="536.0" layoutY="431.0" textFill="#04901e" />
+       </children>
+    </AnchorPane>
+  </items>
+</SplitPane>

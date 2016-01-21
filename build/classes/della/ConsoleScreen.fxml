@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="consolepane"  prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="della.ConsoleScreenController">
+   <children>
+      <Text layoutX="526.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Internet" />
+      <Label fx:id="NotConnected" layoutX="511.0" layoutY="368.0"  textFill="RED" />
+      <Label fx:id="Connected" layoutX="511.0" layoutY="368.0"  textFill="#04901e" />
+      <Label fx:id="lbAssignTeamConsole" layoutX="362.0" layoutY="368.0" text="-no team assigned-" />
+      <Label fx:id="lbDueDateConsole" layoutX="463.0" layoutY="248.0" />
+      <Label fx:id="lbCreationDateConsole" layoutX="463.0" layoutY="225.0" />
+      <Label fx:id="lbAssignMemConsole" layoutX="353.0" layoutY="327.0" text="-no member assigned-" />
+      <Label fx:id="lbStatusConsole" layoutX="447.0" layoutY="287.0" text="Open" />
+      <Text layoutX="350.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assigned to Team:" />
+      <Text layoutX="349.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assigned to member:" />
+      <Text layoutX="399.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:" />
+      <Text layoutX="350.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Action Item:" />
+      <Text layoutX="381.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Due:" />
+      <Text layoutX="382.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Creation:" wrappingWidth="69.37890625" />
+      <Text layoutX="352.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dates" />
+      <ComboBox fx:id="cbInclusionFactorConsole" layoutX="381.0" layoutY="188.0" prefHeight="25.0" prefWidth="208.0" promptText="All Action Items" >
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="All Action Items" />
+               <String fx:value="Open Action Items" />
+               <String fx:value="Closed Action Items" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Text layoutX="381.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inclusion Factor:" />
+      <ComboBox fx:id="cbSecondSortingFactorConsole" layoutX="381.0" layoutY="148.0" prefHeight="25.0" prefWidth="208.0" promptText="None">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="None" />
+               <String fx:value="Creation Date" />
+               <String fx:value="Due Date" />
+               <String fx:value="Assigned Member" />
+               <String fx:value="Assigned Team" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Text layoutX="381.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Second Sorting Factor:" />
+      <ComboBox fx:id="cbFirstSortingFactorConsole" layoutX="381.0" layoutY="108.0" prefHeight="25.0" prefWidth="208.0" promptText="None">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="None" />
+               <String fx:value="Creation Date" />
+               <String fx:value="Due Date" />
+               <String fx:value="Assigned Member" />
+               <String fx:value="Assigned Team" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Text layoutX="381.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Sorting Factor:" wrappingWidth="136.810546875" />
+      <ComboBox fx:id="cbSortingDirectionConsole" layoutX="381.0" layoutY="66.0" prefHeight="25.0" prefWidth="211.0" promptText="Small to Large">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Small to Large" />
+               <String fx:value="Large to Small" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Text layoutX="381.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sorting direction:" />
+      <TextArea fx:id="taResolutionConsole" layoutX="16.0" layoutY="321.0" prefHeight="66.0" prefWidth="327.0" />
+      <Text layoutX="15.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resolution:" wrappingWidth="68.669921875" />
+      <TextArea fx:id="taDescriptionConsole" layoutX="15.0" layoutY="235.0" prefHeight="61.0" prefWidth="327.0" />
+      <Text layoutX="18.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description:" />
+      <TextField fx:id="tfNameConsole" layoutX="63.0" layoutY="188.0" prefHeight="25.0" prefWidth="278.0" />
+      <Text layoutX="18.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+      <Text layoutX="18.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Action Item:" wrappingWidth="125.306640625" />
+      <Text layoutX="18.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Action Items:" wrappingWidth="89.328125" />
+      <TextField alignment="CENTER" editable="false" layoutX="7.0" layoutY="10.0" prefHeight="25.0" prefWidth="584.0" text="Console" />
+      <ComboBox fx:id="cbdiaplayActionItems" onAction="#SelectCombox" layoutX="42.0" layoutY="79.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

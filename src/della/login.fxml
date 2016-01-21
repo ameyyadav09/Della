@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="753.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="della.loginController">
+   <children>
+      <Label layoutX="93.0" layoutY="150.0" text="DELLA" textFill="#1dbf92">
+         <font>
+            <Font name="Cambria" size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="390.0" layoutY="178.0" text="Username :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Username" layoutX="496.0" layoutY="179.0" />
+      <Label layoutX="390.0" layoutY="213.0" prefHeight="27.0" prefWidth="89.0" text="Password :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="Password" layoutX="496.0" layoutY="214.0" />
+      <Button fx:id="Signin" layoutX="496.0" layoutY="264.0" mnemonicParsing="false" onAction="#Signinbox" text="LOGIN" textFill="#2f0fdb">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

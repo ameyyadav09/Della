@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="teampane" prefHeight="400" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="della.TeamsScreenController">
+   <children>
+      <Label layoutX="228.0" layoutY="193.0" text="to see member association" />
+      <Label layoutX="241.0" layoutY="178.0" text="Click on team's name " />
+      <Button fx:id="btRemoveAssociationTeams" disable="true" layoutX="230.0" layoutY="375.0" mnemonicParsing="false" onAction="#RemoveAssociationTeams" text="&lt;- Remove Association" />
+      <Button fx:id="btAddAssociationTeams" disable="true" layoutX="241.0" layoutY="339.0" mnemonicParsing="false" onAction="#AddAssociationTeams" text="Add Association -&gt;" />
+      <Text fx:id="txtCurrentmembers" layoutX="389.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current members for team" />
+      <Text layoutX="340.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3.Click on &quot;Remove association&quot; button.">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Text>
+      <Text layoutX="340.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2.Click on a member name in the list below.">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Text>
+      <Text layoutX="340.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.Click on the name of the team above.">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Text>
+      <Text layoutX="340.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To remove a member association for a team:" />
+      <Button fx:id="btRemoveFromListTeams" disable="true" layoutX="237.0" layoutY="123.0" mnemonicParsing="false" onAction="#removeTeam" text="&lt;- Remove from List" />
+      <Text layoutX="389.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teams known by Della" />
+      <Button fx:id="btAddToListTeams" disable="true" layoutX="254.0" layoutY="60.0" mnemonicParsing="false" onAction="#insertTeam" text="Add to List -&gt;" />
+      <Label fx:id="availableTeamsMembersTab" layoutX="145.0" layoutY="304.0" />
+      <Text fx:id="txtAvailablemembers" layoutX="24.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available members for team" />
+      <Text layoutX="36.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3.Click on &quot;Add association&quot; button.">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Text>
+      <Text layoutX="37.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2.Click on a member name in the list below">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Text>
+      <Text layoutX="36.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.Click on the name of the team above right.">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Text>
+      <Text layoutX="23.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To add a member association for a team:" />
+      <Text layoutX="37.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2.Click on the &quot;Remove from the List&quot; button.">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Text>
+      <Text layoutX="37.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.Click on the name to remove.">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Text>
+      <Text layoutX="24.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To remove a name from the list:" />
+      <Text layoutX="36.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3.Click the &quot;Add to List&quot; button.">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Text>
+      <Text layoutX="36.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2.Type the name.">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Text>
+      <Text layoutX="36.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.Click on the box above.">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Text>
+      <Text layoutX="24.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To add a name to the list:" />
+      <TextField fx:id="tfTeamName" layoutX="24.0" layoutY="60.0" />
+      <Text layoutX="24.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name of a new team" />
+      <TextField alignment="CENTER" editable="false" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="593.0" text="Teams" />
+      <ListView fx:id="lvTeamsByDellaTeams" layoutX="383.0" layoutY="65.0" prefHeight="153.0" prefWidth="200.0" />
+      <Label layoutX="482.0" layoutY="436.0" text="Internet:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="NotConnected4" layoutX="546.0" layoutY="440.0" textFill="RED" />
+      <Label fx:id="Connected4" layoutX="546.0" layoutY="440.0" textFill="#04901e" />
+      <ListView fx:id="lvAvailableMembersTeams" layoutX="22.0" layoutY="320.0" prefHeight="122.0" prefWidth="200.0" />
+      <ListView fx:id="lvCurrentMembersForTeams" layoutX="383.0" layoutY="321.0" prefHeight="116.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>
